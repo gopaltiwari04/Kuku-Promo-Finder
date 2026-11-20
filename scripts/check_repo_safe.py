@@ -62,7 +62,7 @@ def show_words():
     return title, names - {"LADY", "LORD", "KING", "QUEEN", "DUKE", "MISTER", "MADAM"}
 
 
-QUOTING = ("raw_outputs/", "docs/", "profiles/", "eval/judge", "eval/manual", "eval/results", "eval/packet")
+QUOTING = ("raw_outputs", "docs/", "profiles/", "eval/judge", "eval/manual", "eval/results", "eval/packet")
 bad = []
 files = candidate_files()
 title, names = show_words()

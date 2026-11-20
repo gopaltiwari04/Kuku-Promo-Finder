@@ -8,6 +8,7 @@ episode-*.txt
 /input/
 /input_pack/
 raw_outputs/
+*.zip
 docs/
 profiles/*.json
 eval/*

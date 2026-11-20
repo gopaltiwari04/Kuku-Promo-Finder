@@ -90,7 +90,8 @@ if _PW and not st.session_state.get("_authed"):
         st.rerun()
     st.stop()
 
-ui.inject_css(st)
+ui.inject_css(st, intro=not st.session_state.get("_kp_intro_done"))   # the logo intro plays once per session
+st.session_state["_kp_intro_done"] = True
 
 
 # ------------------------------------------------------------------------------------- data
@@ -334,7 +335,7 @@ INDEX, _ = corpus(str(config.DEFAULT_INPUT_DIR)) if HAVE_EPISODES else ({}, [])
 meta, promos, audit, verify, quality = D["meta"], D["promos"], D["audit"], D["verify"], D["quality"]
 DUR = {int(r.episode): float(r.duration_sec) for r in D["stats"].itertuples()}
 N_EPS = int(meta["episodes_parsed"])
-scorer = meta["provider"].split(":")[-1]
+scorer = meta.get("reranker") or meta["provider"].split(":")[-1]       # shown in the top bar as the re-ranker
 waves = {w: [p for p in sorted(promos, key=lambda x: x["post_order"]) if ui.wave_of(p) == w] for w in (1, 2, 3, 4)}
 plan = waves[1] + waves[2] + waves[3]
 checks = verify.get("checks", {})

@@ -1,7 +1,12 @@
 """Kuku Promo Finder - simple presentation layer for app.py.
 
-Plain dark theme, one accent colour, a subtle fade as panels scroll in and hover states. No intro animation:
-the page shows the plan as soon as the data is loaded.
+Plain dark theme, one accent colour and hover states. Motion, all CSS (no JavaScript):
+  * first load: the Kuku FM logo appears in the centre, flies to its place in the top bar, then the app shows
+    (once per session; skipped for readers who ask for reduced motion);
+  * scrolling: text and panels fade in as they enter and fade out as they leave; a thin bar under the top bar
+    shows how far down the page you are, and the bar gains a shadow once the page has scrolled.
+  Scroll effects use CSS scroll-driven animations (Chrome, Edge, Safari 26); other browsers show the page without
+  them.
 The Kuku FM logo is never redrawn here: drop the official file into static/ (see find_logo) and it is used
 as-is; until then the header shows the plain text "KUKU FM".
 Nothing in this module touches the pipeline or raw_outputs/.
@@ -79,12 +84,39 @@ def find_logo() -> Optional[Path]:
     return None
 
 
-def logo_html(height: int = 30) -> str:
+_LOGO_CACHE: Dict[str, str] = {}
+
+
+def logo_data_uri() -> Optional[str]:
+    """The logo as a data URI. A raster logo saved with a dark margin around the icon (a screenshot of the app icon)
+    is trimmed to the icon so it sits flush in the top bar; the icon itself is not changed."""
     f = find_logo()
-    if f is not None:
-        data = base64.b64encode(f.read_bytes()).decode("ascii")
-        return (f'<img class="kp-logo-img" src="data:{_MIME[f.suffix.lower()]};base64,{data}" alt="Kuku FM" '
-                f'style="height:{height}px">')
+    if f is None:
+        return None
+    key = f"{f}:{f.stat().st_mtime}"
+    if key not in _LOGO_CACHE:
+        mime, raw = _MIME[f.suffix.lower()], f.read_bytes()
+        if mime != "image/svg+xml":
+            try:
+                import io
+                from PIL import Image
+                im = Image.open(io.BytesIO(raw)).convert("RGBA")
+                box = im.convert("L").point(lambda v: 255 if v > 60 else 0).getbbox()
+                if box and (box[2] - box[0]) * (box[3] - box[1]) < 0.95 * im.width * im.height:
+                    buf = io.BytesIO()
+                    im.crop(box).save(buf, "PNG")
+                    mime, raw = "image/png", buf.getvalue()
+            except Exception:
+                pass
+        _LOGO_CACHE.clear()
+        _LOGO_CACHE[key] = f"data:{mime};base64,{base64.b64encode(raw).decode('ascii')}"
+    return _LOGO_CACHE[key]
+
+
+def logo_html(height: int = 30) -> str:
+    uri = logo_data_uri()
+    if uri is not None:
+        return f'<img class="kp-logo-img" src="{uri}" alt="Kuku FM" style="height:{height}px">'
     return f'<span class="kp-logo-txt" style="font-size:{height * 0.62:.0f}px">KUKU FM</span>'
 
 
@@ -108,13 +140,17 @@ p, li { color: __T2__; }
 .kp-top { position: fixed; top: 0; left: 0; right: 0; height: 60px; z-index: 1000; display: flex; align-items: center; gap: 14px;
   padding: 0 28px; background: rgba(11,13,18,.94); border-bottom: 1px solid __BORDER__; backdrop-filter: blur(10px); }
 .kp-logo { display: flex; align-items: center; height: 32px; }
-.kp-logo-img { display: block; width: auto; }
+.kp-logo-img { display: block; width: auto; border-radius: 18%; }
 .kp-logo-txt { font-weight: 800; letter-spacing: .06em; color: #fff; white-space: nowrap; line-height: 1; }
 .kp-top .app { font-weight: 700; color: __T1__; font-size: .98rem; }
 .kp-top .sep { width: 1px; height: 20px; background: __BORDER2__; }
 .kp-top .show { color: __T3__; font-size: .88rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .kp-top .right { margin-left: auto; font-size: .8rem; color: __T3__; white-space: nowrap; }
 .kp-top .right b { color: __T2__; font-weight: 600; }
+/* scroll progress under the top bar (Streamlit's page scroller is main[data-testid="stMain"]) */
+[data-testid="stMain"] { scroll-timeline: --kpPage block; }
+.kp-progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; transform-origin: 0 50%;
+  transform: scaleX(0); background: linear-gradient(90deg, __ACCENT__, #FFB199); }
 /* intro header */
 .kp-hero h1 { font-size: 2.1rem; font-weight: 800; letter-spacing: -.02em; color: __T1__; margin: 6px 0 8px; padding: 0; }
 .kp-hero p.lede { font-size: 1rem; line-height: 1.65; color: __T2__; max-width: 820px; margin: 0; }
@@ -185,17 +221,27 @@ p, li { color: __T2__; }
 /* buttons */
 div.stButton > button, div.stDownloadButton > button { border-radius: 10px; font-weight: 600; }
 button[data-testid="stBaseButton-primary"] { background: __ACCENT__ !important; border-color: __ACCENT__ !important; }
-/* subtle fade as panels scroll in and out */
+/* scroll: panels and text fade in as they enter and out as they leave; progress bar; top-bar shadow */
 @supports (animation-timeline: view()) {
   [class*="st-key-kp_"], .kp-fade { animation: kpIn linear both, kpOut linear forwards; animation-timeline: view(), view();
     animation-range: entry 0% entry 55%, exit 45% exit 100%; }
+  [data-testid="stElementContainer"]:is(:has(> [data-testid="stMarkdown"]), :has(> [data-testid="stMetric"])):not(:has(.kp-fixed)):not([class*="st-key-kp_"] *) {
+    animation: kpTextIn linear both, kpTextOut linear forwards; animation-timeline: view(), view();
+    animation-range: entry 0% entry 70%, exit 30% exit 100%; }
+  .kp-progress { animation: kpProg linear both; animation-timeline: --kpPage; }
+  .kp-top { animation: kpTopShade linear both; animation-timeline: --kpPage; animation-range: 0px 160px; }
 }
+@supports not (animation-timeline: view()) { .kp-progress { display: none; } }
 @keyframes kpIn { from { opacity: 0; translate: 0 18px; } to { opacity: 1; translate: 0 0; } }
 @keyframes kpOut { from { opacity: 1; } to { opacity: .15; } }
+@keyframes kpTextIn { from { opacity: 0; translate: 0 10px; } to { opacity: 1; translate: 0 0; } }
+@keyframes kpTextOut { from { opacity: 1; } to { opacity: 0; } }
+@keyframes kpProg { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes kpTopShade { from { box-shadow: none; } to { box-shadow: 0 8px 24px rgba(0,0,0,.45); } }
 @media (max-width: 900px) { .kp-seg { grid-template-columns: 20px 56px 1fr 60px; } .kp-seg .kp-bar { display: none; }
   .kp-row { grid-template-columns: 36px 1fr; } .kp-row .w { grid-column: 1 / -1; } .kp-top .show { display: none; } }
 @media (prefers-reduced-motion: reduce) { *, *:before, *:after { animation: none !important; transition: none !important; }
-  }
+  .kp-intro { display: none !important; } }
 """
 
 def _fill(css: str) -> str:
@@ -208,9 +254,44 @@ def _fill(css: str) -> str:
 
 CSS = _fill(_CSS)
 
+# first load: the logo appears in the centre, flies to the top bar's logo slot (28 px from the left, 14 px from the
+# top, 32 px tall: see .kp-top), then the veil fades and the app shows. 2.8 s in all. Only transform and opacity are
+# animated, so the browser runs it off the main thread and it stays smooth while Streamlit draws the page. The
+# resting state is hidden, so a browser that does not run the animation never sees the veil.
+_INTRO_CSS = """
+.kp-intro { position: fixed; inset: 0; z-index: 3000; background: __BG__; pointer-events: none; opacity: 0;
+  visibility: hidden; animation: kpVeil 2.8s ease both; }
+.kp-intro .lg { position: fixed; top: 14px; left: 28px; height: 120px; transform-origin: 0 0; will-change: transform;
+  transform: scale(.26667); animation: kpFly 2.8s cubic-bezier(.65, 0, .35, 1) both; }
+.kp-intro .lg img { display: block; height: 100%; width: auto; border-radius: 18%; box-shadow: 0 18px 50px rgba(0,0,0,.45); }
+.kp-intro .wm { position: fixed; top: calc(50% + 34px); left: 50%; transform: translateX(-50%); text-align: center;
+  white-space: nowrap; animation: kpWord 2.8s ease both; }
+.kp-intro .wm b { display: block; font-size: 1.7rem; font-weight: 800; letter-spacing: .08em; color: #fff; }
+.kp-intro .wm span { display: block; margin-top: 4px; font-size: .92rem; color: __T3__; }
+@keyframes kpVeil { 0%, 86% { opacity: 1; visibility: visible; } 100% { opacity: 0; visibility: hidden; } }
+@keyframes kpFly {
+  0% { opacity: 0; transform: translate(calc(50vw - 70px), calc(50vh - 76px)) scale(.7); }
+  12%, 58% { opacity: 1; transform: translate(calc(50vw - 88px), calc(50vh - 94px)) scale(1); }
+  84%, 100% { opacity: 1; transform: translate(0, 0) scale(.26667); } }
+@keyframes kpWord { 0%, 10% { opacity: 0; transform: translate(-50%, 10px); } 22%, 52% { opacity: 1; transform: translate(-50%, 0); }
+  60%, 100% { opacity: 0; transform: translate(-50%, -8px); } }
+"""
+INTRO_CSS = _fill(_INTRO_CSS)
+
+
+def intro_html() -> str:
+    """The first-load overlay: logo + "Kuku FM / Promo Finder". Without a logo file only the words show and fade."""
+    uri = logo_data_uri()
+    lg = f'<div class="lg"><img src="{uri}" alt="Kuku FM"></div>' if uri else ""
+    return f'<div class="kp-intro">{lg}<div class="wm"><b>KUKU FM</b><span>Promo Finder</span></div></div>'
+
 
 def inject_css(st, intro: bool = False) -> None:
-    st.markdown(f'<style>{CSS}</style><div class="kp-fixed"></div>',
+    """Theme CSS on every run; the intro overlay only when asked (app.py: first load of a session)."""
+    # one <style> block, closed on the same line as the markup: Markdown ends an HTML block at the line holding
+    # </style>, so a second multi-line <style> after it would be read as text
+    css = f"{CSS}\n{INTRO_CSS}" if intro else CSS
+    st.markdown(f'<style>{css}</style><div class="kp-fixed">{intro_html() if intro else ""}</div>',
                 unsafe_allow_html=True)
 
 
@@ -218,7 +299,7 @@ def inject_css(st, intro: bool = False) -> None:
 def topbar_html(show_title: str, scorer: str) -> str:
     return (f'<div class="kp-fixed"><div class="kp-top"><div class="kp-logo">{logo_html(32)}</div>'
             f'<span class="app">Promo Finder</span><span class="sep"></span><span class="show">{esc(show_title)}</span>'
-            f'<span class="right">Scorer: <b>{esc(scorer)}</b></span></div></div>')
+            f'<span class="right">Re-ranker: <b>{esc(scorer)}</b></span><div class="kp-progress"></div></div></div>')
 
 
 def hero_html(show_title: str, n_eps: int, runtime_min: float, n_promos: int, n_wave1: int, checks: str,
