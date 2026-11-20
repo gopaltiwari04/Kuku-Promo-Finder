@@ -1,0 +1,131 @@
+SYNTHETIC TEST SHOW - written for this repository's tests; not part of any input pack.
+EPISODE NUMBER: Episode 1
+EPISODE LOGLINE: At her ex-fiance's engagement gala, Mia is humiliated and thrown out - until a quiet stranger calls her his wife.
+CONTINUITY NOTES: First episode. Establishes Mia, her ex Derek, his new fiancee Brenda, and the stranger Ethan.
+
+--- SCRIPT START ---
+
+SCENE 01
+Scene heading: EXT. SKYLINE HOTEL ROOFTOP - NIGHT
+Scene start: 00:00.00
+Scene end: 01:02.00
+
+Actions and dialogue:
+
+**CAMERA:**
+Start: (00:00.00) | End: (00:03.00)
+Wide shot of a glittering rooftop gala; Mia stands alone by the bar in a plain borrowed dress.
+
+**BRENDA (Sneering, Loud):**
+Start: (00:00.00) | End: (00:02.60)
+"Who let the waitress in?"
+
+**ACTION:**
+Start: (00:02.60) | End: (00:04.40)
+Brenda throws a full glass of champagne into Mia's face.
+
+**SOUND FX:**
+Start: (00:04.40) | End: (00:05.40)
+Glass shatters on the stone floor; the crowd gasps.
+
+**MIA (Shocked, Hurt):**
+Start: (00:05.40) | End: (00:07.80)
+"Brenda, why are you doing this?"
+
+**DEREK (Cold):**
+Start: (00:07.80) | End: (00:10.80)
+"Because I'm marrying her, Mia. Not you."
+
+**MIA (Desperate):**
+Start: (00:10.80) | End: (00:13.60)
+"You proposed to me last week!"
+
+**DEREK (Smug):**
+Start: (00:13.60) | End: (00:17.00)
+"That was before her father bought my company."
+
+**BRENDA (Gloating):**
+Start: (00:17.00) | End: (00:19.60)
+"Security! Throw her out."
+
+**ACTION:**
+Start: (00:19.60) | End: (00:21.80)
+Two guards grab Mia by both arms and drag her toward the elevator.
+
+**MIA (Struggling, Screaming):**
+Start: (00:21.80) | End: (00:23.60)
+"Let go of me!"
+
+**CAMERA:**
+Start: (00:23.60) | End: (00:26.60)
+The elevator opens; a tall man in a plain grey coat steps out and blocks the guards.
+
+**STRANGER IN GREY COAT (Calm, Low):**
+Start: (00:23.60) | End: (00:26.20)
+"Take your hands off my wife."
+
+**DEREK (Laughing, Mocking):**
+Start: (00:26.20) | End: (00:29.20)
+"Your wife? She doesn't even have a boyfriend."
+
+**STRANGER IN GREY COAT (Quiet, Firm):**
+Start: (00:29.20) | End: (00:31.20)
+"She does now."
+
+**DEREK (Furious):**
+Start: (00:31.20) | End: (00:33.60)
+"Do you know who I am? My family owns half this city."
+
+**STRANGER IN GREY COAT (Cold, Menacing):**
+Start: (00:33.60) | End: (00:36.20)
+"Then you should be careful with the other half."
+
+**CAMERA:**
+Start: (00:36.20) | End: (00:39.20)
+Close-up of Mia staring at the stranger in disbelief.
+
+**SOUND FX:**
+Start: (00:36.20) | End: (00:37.60)
+A tense string sting holds.
+
+**MIA (Whispering, Stunned):**
+Start: (00:37.60) | End: (00:39.20)
+"Who are you?"
+
+**ACTION:**
+Start: (00:39.20) | End: (00:42.20)
+Derek's face drains of color as the stranger turns to the guards, who let go of Mia at once.
+
+**DEREK (Threatening):**
+Start: (00:42.20) | End: (00:45.40)
+"You will regret this, Mia. Both of you will."
+
+**STRANGER IN GREY COAT (Gentle):**
+Start: (00:45.40) | End: (00:48.00)
+"Come with me. Your car is waiting."
+
+**MIA (Confused):**
+Start: (00:48.00) | End: (00:50.20)
+"My car? I don't have a car."
+
+**STRANGER IN GREY COAT (Calm):**
+Start: (00:50.20) | End: (00:52.60)
+"You do now. Sign this and you'll have more."
+
+**ACTION:**
+Start: (00:52.60) | End: (00:55.20)
+He holds out a folded marriage contract and a silver pen.
+
+**MIA (Shocked):**
+Start: (00:55.20) | End: (00:57.40)
+"A marriage contract? With a stranger?"
+
+**CAMERA:**
+Start: (00:57.40) | End: (01:00.40)
+Close-up of the contract's signature line as Mia's trembling hand lifts the pen.
+
+**SOUND FX:**
+Start: (00:57.40) | End: (00:59.00)
+A low ominous drone swells.
+
+--- SCRIPT END ---

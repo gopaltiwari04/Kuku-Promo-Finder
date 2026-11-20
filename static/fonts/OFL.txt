@@ -1,0 +1,5 @@
+Bundled fonts (latin subsets, woff2) - SIL Open Font License 1.1 (https://openfontlicense.org), redistributed
+unmodified from the @fontsource npm packages:
+
+  plus-jakarta-sans-latin-wght-normal.woff2   Copyright 2020 The Plus Jakarta Sans Project Authors
+  jetbrains-mono-latin-wght-normal.woff2      Copyright 2020 The JetBrains Mono Project Authors

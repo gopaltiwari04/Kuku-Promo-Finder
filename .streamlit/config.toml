@@ -1,0 +1,17 @@
+# Kuku Promo Finder - native Streamlit theme (widgets, focus rings, primary buttons).
+# Layout, logo intro and scroll fades are added by src/ui_theme.py.
+[theme]
+base = "dark"
+primaryColor = "#FF5A36"
+backgroundColor = "#0B0D12"
+secondaryBackgroundColor = "#11151E"
+textColor = "#F8FAFC"
+font = "sans serif"
+
+[client]
+toolbarMode = "minimal"
+showSidebarNavigation = false
+
+[server]
+# serves ./static (bundled OFL fonts) at app/static/ so typography works offline
+enableStaticServing = true

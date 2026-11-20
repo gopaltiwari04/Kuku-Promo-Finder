@@ -1,0 +1,110 @@
+SYNTHETIC TEST SHOW - written for this repository's tests; not part of any input pack.
+EPISODE NUMBER: Episode 2
+EPISODE LOGLINE: Mia signs the contract; at her new job, Brenda tears up her resume - and a voice from the boardroom hires her.
+CONTINUITY NOTES: Picks up directly from Episode 1's cliffhanger as Mia holds the marriage contract.
+
+--- SCRIPT START ---
+
+SCENE 01
+Scene heading: INT. VANCE TOWER - LOBBY - DAY
+Scene start: 00:00.00
+Scene end: 00:24.60
+
+Actions and dialogue:
+
+**CAMERA:**
+Start: (00:00.00) | End: (00:03.00)
+Medium shot of Mia in the marble lobby of Vance Tower, clutching her resume.
+
+**BRENDA (Mocking, Loud):**
+Start: (00:00.00) | End: (00:02.40)
+"You? Applying here?"
+
+**ACTION:**
+Start: (00:02.40) | End: (00:04.40)
+Brenda snatches the resume and rips it in half in front of the receptionists.
+
+**SOUND FX:**
+Start: (00:04.40) | End: (00:05.40)
+Paper tearing; a receptionist gasps.
+
+**BRENDA (Cruel):**
+Start: (00:05.40) | End: (00:08.40)
+"You'll never work in this city again."
+
+**MIA (Defiant):**
+Start: (00:08.40) | End: (00:11.00)
+"You can't fire someone you haven't hired."
+
+**BRENDA (Shouting):**
+Start: (00:11.00) | End: (00:14.20)
+"Watch me. Security! Remove this woman from the building."
+
+**ACTION:**
+Start: (00:14.20) | End: (00:16.60)
+A guard seizes Mia's elbow and pulls her toward the revolving door.
+
+**MIA (Desperate, Pleading):**
+Start: (00:16.60) | End: (00:18.80)
+"Please, I just need this job!"
+
+**BRENDA (Gloating):**
+Start: (00:18.80) | End: (00:21.60)
+"Then you should have thought about that before you embarrassed my fiance."
+
+SCENE 02
+Scene heading: INT. VANCE TOWER - BOARDROOM - CONTINUOUS
+Scene start: 00:24.60
+Scene end: 00:49.20
+
+Actions and dialogue:
+
+**CAMERA:**
+Start: (00:24.60) | End: (00:27.60)
+Wide shot as the boardroom doors swing open onto the lobby balcony.
+
+**ETHAN (O.S.) (Cold, Authoritative):**
+Start: (00:24.60) | End: (00:27.00)
+"Let her go."
+
+**ACTION:**
+Start: (00:27.00) | End: (00:29.00)
+The guard freezes and releases Mia at once.
+
+**BRENDA (Furious):**
+Start: (00:29.00) | End: (00:31.60)
+"Who said that? Show yourself!"
+
+**CAMERA:**
+Start: (00:31.60) | End: (00:34.60)
+Low-angle shot of Ethan walking down the glass staircase, flanked by two executives.
+
+**ETHAN (Calm, Final):**
+Start: (00:31.60) | End: (00:34.60)
+"Miss Carter is hired. Starting today, she reports to me."
+
+**BRENDA (Shocked, Sneering):**
+Start: (00:34.60) | End: (00:37.20)
+"Reports to you? You're a driver!"
+
+**ETHAN (Icy):**
+Start: (00:37.20) | End: (00:40.40)
+"And you are a director who just tore up a candidate's resume in my lobby."
+
+**BRENDA (Stunned):**
+Start: (00:40.40) | End: (00:42.40)
+"Your lobby?"
+
+**CAMERA:**
+Start: (00:42.40) | End: (00:45.40)
+Close-up of Brenda's face as an executive whispers in her ear.
+
+**SOUND FX:**
+Start: (00:42.40) | End: (00:43.80)
+A sharp musical sting.
+
+**EXECUTIVE (Nervous, Urgent):**
+Start: (00:43.80) | End: (00:46.20)
+"Do you know who you just insulted?"
+
+--- SCRIPT END ---

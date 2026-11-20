@@ -1,0 +1,29 @@
+# secrets
+.env
+.streamlit/secrets.toml
+# Kuku's confidential input pack, and every output that quotes or describes it: never commit
+episode-*.txt
+!tests/fixtures/**/episode-*.txt
+/episodes/
+/input/
+/input_pack/
+raw_outputs/
+docs/
+profiles/*.json
+eval/*
+!eval/JUDGE_PROMPT.md
+!eval/key.json
+# local working state
+.llm_cache/
+review/
+runs/
+labels/*.csv
+!labels/judge_*.csv
+# python / latex
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+
+# files the assistant app saves into this folder
+Claude outputs/

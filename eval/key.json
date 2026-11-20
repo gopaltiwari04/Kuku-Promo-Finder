@@ -1,0 +1,455 @@
+{
+ "seed": 7,
+ "run": "raw_outputs",
+ "baseline_sec": 40.0,
+ "finale_first_episode": 46,
+ "clips": {
+  "C01": {
+   "source": "baseline",
+   "promo_id": "LAST40_EP14",
+   "segments": [
+    {
+     "episode": 14,
+     "start_timestamp": "00:50.50",
+     "end_timestamp": "01:27.63",
+     "duration_sec": 37.13
+    }
+   ],
+   "duration_sec": 37.13
+  },
+  "C02": {
+   "source": "pipeline",
+   "promo_id": "PROMO_EP28_INTRA_01",
+   "post_order": 6,
+   "segments": [
+    {
+     "episode": 28,
+     "start_timestamp": "00:47.90",
+     "end_timestamp": "01:10.20",
+     "duration_sec": 22.3
+    },
+    {
+     "episode": 28,
+     "start_timestamp": "01:41.20",
+     "end_timestamp": "02:05.70",
+     "duration_sec": 24.5
+    }
+   ],
+   "duration_sec": 46.8
+  },
+  "C03": {
+   "source": "pipeline",
+   "promo_id": "PROMO_ARC_EP29_EP32_01",
+   "post_order": 15,
+   "segments": [
+    {
+     "episode": 29,
+     "start_timestamp": "00:40.00",
+     "end_timestamp": "00:59.00",
+     "duration_sec": 19.0
+    },
+    {
+     "episode": 32,
+     "start_timestamp": "01:22.20",
+     "end_timestamp": "01:49.40",
+     "duration_sec": 27.2
+    }
+   ],
+   "duration_sec": 46.2
+  },
+  "C04": {
+   "source": "baseline",
+   "promo_id": "LAST40_EP03",
+   "segments": [
+    {
+     "episode": 3,
+     "start_timestamp": "01:45.90",
+     "end_timestamp": "02:25.75",
+     "duration_sec": 39.85
+    }
+   ],
+   "duration_sec": 39.85
+  },
+  "C05": {
+   "source": "pipeline",
+   "promo_id": "PROMO_ARC_EP12_EP16_01",
+   "post_order": 11,
+   "segments": [
+    {
+     "episode": 12,
+     "start_timestamp": "00:00.20",
+     "end_timestamp": "00:13.90",
+     "duration_sec": 13.7
+    },
+    {
+     "episode": 16,
+     "start_timestamp": "00:22.70",
+     "end_timestamp": "00:44.20",
+     "duration_sec": 21.5
+    }
+   ],
+   "duration_sec": 35.2
+  },
+  "C06": {
+   "source": "pipeline",
+   "promo_id": "PROMO_EP15_CONT_02",
+   "post_order": 10,
+   "segments": [
+    {
+     "episode": 15,
+     "start_timestamp": "00:08.20",
+     "end_timestamp": "00:55.70",
+     "duration_sec": 47.5
+    }
+   ],
+   "duration_sec": 47.5
+  },
+  "C07": {
+   "source": "pipeline",
+   "promo_id": "PROMO_EP20_CONT_01",
+   "post_order": 12,
+   "segments": [
+    {
+     "episode": 20,
+     "start_timestamp": "01:09.10",
+     "end_timestamp": "01:34.50",
+     "duration_sec": 25.4
+    }
+   ],
+   "duration_sec": 25.4
+  },
+  "C08": {
+   "source": "baseline",
+   "promo_id": "LAST40_EP04",
+   "segments": [
+    {
+     "episode": 4,
+     "start_timestamp": "01:52.80",
+     "end_timestamp": "02:31.40",
+     "duration_sec": 38.6
+    }
+   ],
+   "duration_sec": 38.6
+  },
+  "C09": {
+   "source": "baseline",
+   "promo_id": "LAST40_EP26",
+   "segments": [
+    {
+     "episode": 26,
+     "start_timestamp": "01:26.50",
+     "end_timestamp": "02:00.88",
+     "duration_sec": 34.38
+    }
+   ],
+   "duration_sec": 34.38
+  },
+  "C10": {
+   "source": "baseline",
+   "promo_id": "LAST40_EP33",
+   "segments": [
+    {
+     "episode": 33,
+     "start_timestamp": "02:14.50",
+     "end_timestamp": "02:54.04",
+     "duration_sec": 39.54
+    }
+   ],
+   "duration_sec": 39.54
+  },
+  "C11": {
+   "source": "pipeline",
+   "promo_id": "PROMO_EP21_CONT_01",
+   "post_order": 7,
+   "segments": [
+    {
+     "episode": 21,
+     "start_timestamp": "00:03.90",
+     "end_timestamp": "00:35.80",
+     "duration_sec": 31.9
+    }
+   ],
+   "duration_sec": 31.9
+  },
+  "C12": {
+   "source": "pipeline",
+   "promo_id": "PROMO_EP07_INTRA_01",
+   "post_order": 5,
+   "segments": [
+    {
+     "episode": 7,
+     "start_timestamp": "00:21.70",
+     "end_timestamp": "00:39.80",
+     "duration_sec": 18.1
+    },
+    {
+     "episode": 7,
+     "start_timestamp": "00:51.20",
+     "end_timestamp": "01:09.50",
+     "duration_sec": 18.3
+    }
+   ],
+   "duration_sec": 36.4
+  },
+  "C13": {
+   "source": "baseline",
+   "promo_id": "LAST40_EP34",
+   "segments": [
+    {
+     "episode": 34,
+     "start_timestamp": "02:31.20",
+     "end_timestamp": "03:10.00",
+     "duration_sec": 38.8
+    }
+   ],
+   "duration_sec": 38.8
+  },
+  "C14": {
+   "source": "pipeline",
+   "promo_id": "PROMO_EP01_CONT_02",
+   "post_order": 9,
+   "segments": [
+    {
+     "episode": 1,
+     "start_timestamp": "01:19.80",
+     "end_timestamp": "01:53.00",
+     "duration_sec": 33.2
+    }
+   ],
+   "duration_sec": 33.2
+  },
+  "C15": {
+   "source": "pipeline",
+   "promo_id": "PROMO_ARC_EP01_EP03_01",
+   "post_order": 1,
+   "segments": [
+    {
+     "episode": 1,
+     "start_timestamp": "00:46.50",
+     "end_timestamp": "01:10.40",
+     "duration_sec": 23.9
+    },
+    {
+     "episode": 3,
+     "start_timestamp": "01:00.30",
+     "end_timestamp": "01:29.30",
+     "duration_sec": 29.0
+    }
+   ],
+   "duration_sec": 52.9
+  },
+  "C16": {
+   "source": "baseline",
+   "promo_id": "LAST40_EP10",
+   "segments": [
+    {
+     "episode": 10,
+     "start_timestamp": "00:54.00",
+     "end_timestamp": "01:34.00",
+     "duration_sec": 40.0
+    }
+   ],
+   "duration_sec": 40.0
+  },
+  "C17": {
+   "source": "baseline",
+   "promo_id": "LAST40_EP07",
+   "segments": [
+    {
+     "episode": 7,
+     "start_timestamp": "01:16.20",
+     "end_timestamp": "01:56.00",
+     "duration_sec": 39.8
+    }
+   ],
+   "duration_sec": 39.8
+  },
+  "C18": {
+   "source": "pipeline",
+   "promo_id": "PROMO_EP21_CONT_02",
+   "post_order": 13,
+   "segments": [
+    {
+     "episode": 21,
+     "start_timestamp": "00:48.80",
+     "end_timestamp": "01:39.20",
+     "duration_sec": 50.4
+    }
+   ],
+   "duration_sec": 50.4
+  },
+  "C19": {
+   "source": "baseline",
+   "promo_id": "LAST40_EP24",
+   "segments": [
+    {
+     "episode": 24,
+     "start_timestamp": "00:53.60",
+     "end_timestamp": "01:32.00",
+     "duration_sec": 38.4
+    }
+   ],
+   "duration_sec": 38.4
+  },
+  "C20": {
+   "source": "baseline",
+   "promo_id": "LAST40_EP21",
+   "segments": [
+    {
+     "episode": 21,
+     "start_timestamp": "01:15.50",
+     "end_timestamp": "01:54.00",
+     "duration_sec": 38.5
+    }
+   ],
+   "duration_sec": 38.5
+  },
+  "C21": {
+   "source": "baseline",
+   "promo_id": "LAST40_EP35",
+   "segments": [
+    {
+     "episode": 35,
+     "start_timestamp": "01:58.20",
+     "end_timestamp": "02:37.50",
+     "duration_sec": 39.3
+    }
+   ],
+   "duration_sec": 39.3
+  },
+  "C22": {
+   "source": "pipeline",
+   "promo_id": "PROMO_EP13_CONT_01",
+   "post_order": 4,
+   "segments": [
+    {
+     "episode": 13,
+     "start_timestamp": "00:45.80",
+     "end_timestamp": "01:13.80",
+     "duration_sec": 28.0
+    }
+   ],
+   "duration_sec": 28.0
+  },
+  "C23": {
+   "source": "baseline",
+   "promo_id": "LAST40_EP06",
+   "segments": [
+    {
+     "episode": 6,
+     "start_timestamp": "01:16.80",
+     "end_timestamp": "01:55.00",
+     "duration_sec": 38.2
+    }
+   ],
+   "duration_sec": 38.2
+  },
+  "C24": {
+   "source": "pipeline",
+   "promo_id": "PROMO_EP42_PREMISE_01",
+   "post_order": 2,
+   "segments": [
+    {
+     "episode": 12,
+     "start_timestamp": "00:26.80",
+     "end_timestamp": "00:43.50",
+     "duration_sec": 16.7
+    },
+    {
+     "episode": 42,
+     "start_timestamp": "01:01.80",
+     "end_timestamp": "01:13.80",
+     "duration_sec": 12.0
+    }
+   ],
+   "duration_sec": 28.7
+  },
+  "C25": {
+   "source": "baseline",
+   "promo_id": "LAST40_EP42",
+   "segments": [
+    {
+     "episode": 42,
+     "start_timestamp": "00:39.90",
+     "end_timestamp": "01:17.80",
+     "duration_sec": 37.9
+    }
+   ],
+   "duration_sec": 37.9
+  },
+  "C26": {
+   "source": "baseline",
+   "promo_id": "LAST40_EP05",
+   "segments": [
+    {
+     "episode": 5,
+     "start_timestamp": "01:10.50",
+     "end_timestamp": "01:50.50",
+     "duration_sec": 40.0
+    }
+   ],
+   "duration_sec": 40.0
+  },
+  "C27": {
+   "source": "baseline",
+   "promo_id": "LAST40_EP41",
+   "segments": [
+    {
+     "episode": 41,
+     "start_timestamp": "00:57.80",
+     "end_timestamp": "01:36.09",
+     "duration_sec": 38.29
+    }
+   ],
+   "duration_sec": 38.29
+  },
+  "C28": {
+   "source": "pipeline",
+   "promo_id": "PROMO_EP05_CONT_01",
+   "post_order": 8,
+   "segments": [
+    {
+     "episode": 5,
+     "start_timestamp": "00:06.50",
+     "end_timestamp": "00:57.50",
+     "duration_sec": 51.0
+    }
+   ],
+   "duration_sec": 51.0
+  },
+  "C29": {
+   "source": "pipeline",
+   "promo_id": "PROMO_ARC_EP03_EP11_01",
+   "post_order": 3,
+   "segments": [
+    {
+     "episode": 3,
+     "start_timestamp": "01:36.30",
+     "end_timestamp": "01:52.50",
+     "duration_sec": 16.2
+    },
+    {
+     "episode": 11,
+     "start_timestamp": "00:43.30",
+     "end_timestamp": "01:15.00",
+     "duration_sec": 31.7
+    }
+   ],
+   "duration_sec": 47.9
+  },
+  "C30": {
+   "source": "pipeline",
+   "promo_id": "PROMO_EP18_CONT_01",
+   "post_order": 14,
+   "segments": [
+    {
+     "episode": 18,
+     "start_timestamp": "00:56.20",
+     "end_timestamp": "01:16.80",
+     "duration_sec": 20.6
+    }
+   ],
+   "duration_sec": 20.6
+  }
+ }
+}

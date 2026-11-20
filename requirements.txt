@@ -1,0 +1,6 @@
+# Pinned to the versions this project was built and tested with (Python 3.12).
+# The pipeline (run_pipeline.py) itself is pure standard library; these are for the review app and tests.
+streamlit==1.67.0
+pandas==3.1.1
+python-dotenv==1.2.4      # loads .env (a built-in fallback reader is used if missing)
+pytest==9.2.0             # python -m pytest -q

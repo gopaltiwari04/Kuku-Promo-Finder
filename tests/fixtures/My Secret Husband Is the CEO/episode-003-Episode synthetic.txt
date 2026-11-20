@@ -1,0 +1,130 @@
+SYNTHETIC TEST SHOW - written for this repository's tests; not part of any input pack.
+EPISODE NUMBER: Episode 3
+EPISODE LOGLINE: Derek and Brenda mock Ethan as a nobody at the shareholders' night - until the board bows to him.
+CONTINUITY NOTES: Follows directly from Episode 2. Ethan's identity is still hidden from Mia.
+
+--- SCRIPT START ---
+
+SCENE 01
+Scene heading: INT. VANCE TOWER - BALLROOM - NIGHT
+Scene start: 00:00.00
+Scene end: 00:41.80
+
+Actions and dialogue:
+
+**CAMERA:**
+Start: (00:00.00) | End: (00:03.00)
+Wide shot of the shareholders' ballroom; Derek and Brenda stand at the center of a laughing crowd.
+
+**DEREK (Mocking, Loud):**
+Start: (00:00.00) | End: (00:02.60)
+"Look, the driver brought his contract bride!"
+
+**ACTION:**
+Start: (00:02.60) | End: (00:04.80)
+Derek shoves Ethan's shoulder hard, spilling his drink.
+
+**SOUND FX:**
+Start: (00:04.80) | End: (00:05.80)
+Glass clatters on the floor; laughter.
+
+**DEREK (Cruel):**
+Start: (00:05.80) | End: (00:08.80)
+"Kneel and apologize to my fiancee, and maybe I'll get you a job parking cars."
+
+**MIA (Angry):**
+Start: (00:08.80) | End: (00:11.20)
+"Stop it, Derek. Leave him alone!"
+
+**BRENDA (Taunting):**
+Start: (00:11.20) | End: (00:14.00)
+"Or what? Your husband will drive me home?"
+
+**CAMERA:**
+Start: (00:14.00) | End: (00:17.00)
+Wide shot as the ballroom doors open and the entire board of directors enters in silence.
+
+**ACTION:**
+Start: (00:14.00) | End: (00:16.60)
+The board members stop in front of Ethan and bow their heads.
+
+**BOARD CHAIRMAN (Respectful):**
+Start: (00:16.60) | End: (00:19.20)
+"Good evening, Mr. Vance. The shareholders are ready for you."
+
+**MIA (Stunned):**
+Start: (00:19.20) | End: (00:21.20)
+"Mr. Vance?"
+
+**MIA (Shocked, Breathless):**
+Start: (00:21.20) | End: (00:23.60)
+"You're the CEO?"
+
+**ETHAN (Quiet, Firm):**
+Start: (00:23.60) | End: (00:26.60)
+"I'm the man who owns this building, Mia. And the company that owns his."
+
+**ACTION:**
+Start: (00:26.60) | End: (00:28.60)
+Derek's phone slips from his hand.
+
+**SOUND FX:**
+Start: (00:28.60) | End: (00:29.60)
+The phone shatters on the marble floor.
+
+**BRENDA (Panicked):**
+Start: (00:29.60) | End: (00:31.80)
+"That's impossible."
+
+**ETHAN (Cold, Menacing):**
+Start: (00:31.80) | End: (00:35.00)
+"Derek, your company's loan is due tomorrow. I'm calling it in."
+
+**CAMERA:**
+Start: (00:35.00) | End: (00:38.00)
+Close-up of Derek's face as the color drains from it.
+
+**SOUND FX:**
+Start: (00:35.00) | End: (00:36.40)
+A deep ominous drone.
+
+**DEREK (Desperate, Shouting):**
+Start: (00:36.40) | End: (00:38.80)
+"You can't do this to me!"
+
+SCENE 02
+Scene heading: EXT. VANCE TOWER - STREET - NIGHT
+Scene start: 00:41.80
+Scene end: 01:00.80
+
+Actions and dialogue:
+
+**CAMERA:**
+Start: (00:41.80) | End: (00:44.80)
+Wide shot of the quiet street outside; snow falls under the streetlights.
+
+**MIA (Soft, Hurt):**
+Start: (00:41.80) | End: (00:44.40)
+"Why didn't you tell me?"
+
+**ETHAN (Tender):**
+Start: (00:44.40) | End: (00:47.40)
+"Because you married me when you thought I had nothing."
+
+**MIA (Warm):**
+Start: (00:47.40) | End: (00:49.80)
+"I married you because you stood up for me."
+
+**ETHAN (Gentle, Loving):**
+Start: (00:49.80) | End: (00:52.40)
+"Then let me keep doing it."
+
+**ACTION:**
+Start: (00:52.40) | End: (00:55.40)
+Ethan wraps his coat around Mia and they walk away together into the night, smiling softly.
+
+**SOUND FX:**
+Start: (00:55.40) | End: (00:57.80)
+A gentle piano melody fades out.
+
+--- SCRIPT END ---
